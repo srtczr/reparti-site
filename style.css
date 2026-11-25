@@ -33,4 +33,15 @@ p, li { color: var(--ink); }
 a { color: var(--sea); }
 ul { padding-left: 22px; }
 li { margin: 6px 0; }
+.steps { padding-left: 0; list-style: none; counter-reset: step; }
+.steps li {
+  counter-increment: step; background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
+  padding: 16px 20px 20px; margin: 16px 0;
+}
+.steps h2 { margin: 0 0 6px; }
+.steps h2::before { content: counter(step) ". "; color: var(--sun); }
+.button {
+  display: inline-block; margin-top: 6px; padding: 12px 22px; border-radius: 12px;
+  background: var(--sea); color: var(--bg); font-weight: 800; text-decoration: none;
+}
 nav { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); display: flex; gap: 20px; flex-wrap: wrap; }
